@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2019, HP Development Company, L.P. All rights reserved.
+ * This software contains confidential and proprietary information of HP.
+ * The user of this software agrees not to disclose, disseminate or copy
+ * such Confidential Information and shall use the software only in accordance
+ * with the terms of the license agreement the user entered into with HP.
+ *
+ * Copyright Gurock Software GmbH. See license.md for details.
+ */
+
+package com.creditSuisse.utility.testrail;
+
+/**
+ * TestRail API Exception handler
+ * @author TestRail - modified by Eric Tyree
+ * @since 12/05/2019
+ */
+public class APIException extends Exception {
+
+	public APIException(String message) {
+		super(message);
+	}
+}

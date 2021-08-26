@@ -1,0 +1,31 @@
+{
+  "staging_Host":
+  {"username":"isentest",
+    "password":"Isen123",
+    "client":"H",
+    "stack":"S"},
+
+  "staging_Client":
+  {"username":"isentest",
+    "password":"Isen123",
+    "client":"C",
+    "stack":"S"},
+
+  "staging_Stream":
+  {"username":"isentest",
+    "password":"Isen123",
+    "client":"C",
+    "stack":"S"},
+
+  "production_Host":
+  {"username":"isentest",
+    "password":"Isen123",
+    "client":"H",
+    "stack":"P"},
+
+  "production_Client":
+  {"username":"isentest",
+    "password":"Isen123",
+    "client":"C",
+    "stack":"P"}
+}

@@ -1,0 +1,84 @@
+<assembly
+        xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2
+  http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+
+    <id>dep</id>
+
+    <formats>
+        <format>jar</format>
+    </formats>
+
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/</outputDirectory>
+            <unpack>true</unpack>
+            <scope>runtime</scope>
+            <excludes>
+                <exclude>/logs</exclude>
+
+            </excludes>
+        </dependencySet>
+    </dependencySets>
+
+    <fileSets>
+        <!-- This is for the suites folder to be included in the JAR file -->
+        <fileSet>
+            <directory>${project.build.directory}/TestSuite</directory>
+            <outputDirectory>suites</outputDirectory>
+            <includes>
+                <include>*.xml</include>
+            </includes>
+        </fileSet>
+
+        <!-- This is for the com folder to be included in the JAR file -->
+        <fileSet>
+            <directory>${project.build.directory}/test-classes/com</directory>
+            <outputDirectory>com</outputDirectory>
+        </fileSet>
+
+        <!-- This is for the properties folder to be included in the JAR file -->
+        <!-- 	<fileSet> -->
+        <!-- 	  <directory>${project.build.directory}/properties</directory> -->
+        <!-- 	  <outputDirectory>properties</outputDirectory> -->
+        <!-- 	  <includes> -->
+        <!-- 	    <include>*.properties</include> -->
+        <!-- 	  </includes> -->
+        <!-- 	</fileSet> -->
+
+        <!-- This is for the credentials folder to be included in the JAR file -->
+        <!-- 	<fileSet> -->
+        <!-- 	  <directory>${project.build.directory}/credentials</directory> -->
+        <!-- 	  <outputDirectory>credentials</outputDirectory> -->
+        <!-- 	  <includes> -->
+        <!-- 	    <include>*.properties</include> -->
+        <!-- 	  </includes> -->
+        <!-- 	</fileSet> -->
+
+        <!-- This is for the locales folder to be included in the JAR file -->
+        <!-- 	<fileSet> -->
+        <!-- 	  <directory>${project.build.directory}/locales</directory> -->
+        <!-- 	  <outputDirectory>locales</outputDirectory> -->
+        <!-- 	</fileSet> -->
+
+        <!-- This is for the testdata folder to be included in the JAR file -->
+        <!-- 	<fileSet> -->
+        <!-- 	  <directory>${project.build.directory}/testdata</directory> -->
+        <!-- 	  <outputDirectory>testdata</outputDirectory> -->
+        <!-- 	  <includes> -->
+        <!-- 	    <include>*.xlsx</include> -->
+        <!-- 	  </includes> -->
+        <!-- 	</fileSet> -->
+
+        <fileSet>
+            <directory>${project.build.directory}/lib</directory>
+            <outputDirectory>lib</outputDirectory>
+            <includes>
+                <include>*.exe</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>

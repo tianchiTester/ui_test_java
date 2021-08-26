@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2019, HP Development Company, L.P. All rights reserved.
+  ~ This software contains confidential and proprietary information of HP.
+  ~  The user of this software agrees not to disclose, disseminate or copy
+  ~  such Confidential Information and shall use the software only in accordance
+  ~   with the terms of the license agreement the user entered into with HP.
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite_EMAT_Host" verbose="1" configfailurepolicy="continue">
+    <test name="Streaming">
+        <classes>
+            <class name="com.creditSuisse.ui.testcase.web.TestDemo1"></class>
+        </classes>
+    </test>
+</suite>
